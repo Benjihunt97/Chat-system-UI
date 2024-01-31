@@ -1,0 +1,20 @@
+.chat-system {
+    display: grid;
+    grid-template-columns: 350px auto;
+    height: 100vh;
+    transition: grid-template-columns 0.5s ease;
+    /* Add transition property */
+}
+
+/* Add a media query to adjust the grid-template-columns property for smaller screens */
+@media screen and (max-width: 640px) {
+    .chat-system {
+        grid-template-columns: auto auto;
+        /* Adjust this value based on your design */
+    }
+}
+
+.chat-display {
+    scrollbar-width: thin;
+    scrollbar-color: white white;
+}
