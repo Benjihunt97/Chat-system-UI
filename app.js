@@ -96,4 +96,13 @@ $(document).ready(() => {
         $('#chat-head-name').text(inboxName);
     });
 
+
+    // toggle the chat settings
+    $('.open-chat-settings').click(() => {
+        $('.chat-settings').toggleClass('active-settings');
+    });
+
+    $('.close-chat-settings').click(() => {
+        $('.chat-settings').toggleClass('active-settings');
+    });
 })
