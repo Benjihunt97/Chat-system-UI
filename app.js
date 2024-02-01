@@ -137,18 +137,22 @@ $(document).ready(() => {
         switch (selectedColor) {
             case '#a855f7':
                 $('.video-animation').css('animation-name', 'purple-animate');
+                $('.call-animation').css('animation-name', 'purple-animate');
                 break;
 
             case '#22c55e':
                 $('.video-animation').css('animation-name', 'green-animate');
+                $('.call-animation').css('animation-name', 'green-animate');
                 break;
 
             case '#ef4444':
                 $('.video-animation').css('animation-name', 'red-animate');
+                $('.call-animation').css('animation-name', 'red-animate');
                 break;
 
             default:
                 $('.video-animation').css('animation-name', 'cyan-animate');
+                $('.call-animation').css('animation-name', 'cyan-animate');
                 break;
         }
 
