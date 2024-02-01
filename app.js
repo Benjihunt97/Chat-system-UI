@@ -94,6 +94,9 @@ $(document).ready(() => {
 
         $('#chat-head-img').attr('src', inboxImg);
         $('#chat-head-name').text(inboxName);
+
+        $('#settings-img').attr('src', inboxImg);
+        $('#settings-name').text(inboxName);
     });
 
 
@@ -104,5 +107,31 @@ $(document).ready(() => {
 
     $('.close-chat-settings').click(() => {
         $('.chat-settings').toggleClass('active-settings');
+    });
+
+
+    // change color theme on svgs
+    $('.color-theme').css({
+        stroke: '#06b6d4'
+    });
+
+    $('.color-theme-btn').css({
+        background: '#06b6d4'
+    });
+
+    let selectColorTheme = $('#selectColorTheme');
+
+    selectColorTheme.on('change', function () {
+        let selectedColor = $(this).val();
+
+        // Update elements with class '.color-theme'
+        $('.color-theme').css({
+            stroke: selectedColor
+        });
+
+        // Update elements with class '.color-theme-btn'
+        $('.color-theme-btn').css({
+            background: selectedColor
+        });
     });
 })
