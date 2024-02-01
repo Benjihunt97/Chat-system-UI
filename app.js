@@ -66,7 +66,7 @@ $(document).ready(() => {
     $.each(inbox, (index, item) => {
         let msgCard = `
             <div class="inbox-item flex gap-4 text-sm hover:bg-slate-100 transition-all cursor-pointer p-4 overflow-hidden">
-                <div class="relative mx-auto md:mx-0">
+                <div class="relative mx-auto md:mx-0 flex-shrink-0">
                     <div class="absolute top-0 right-0 w-[10px] h-[10px] rounded-full bg-${item.state}-500"></div>
                     <img src="${item.img}" alt="" class="w-[40px] h-[40px] object-cover rounded-full inbox-img">
                 </div>
@@ -133,5 +133,42 @@ $(document).ready(() => {
         $('.color-theme-btn').css({
             background: selectedColor
         });
+
+        switch (selectedColor) {
+            case '#a855f7':
+                $('.video-animation').css('animation-name', 'purple-animate');
+                break;
+
+            case '#22c55e':
+                $('.video-animation').css('animation-name', 'green-animate');
+                break;
+
+            case '#ef4444':
+                $('.video-animation').css('animation-name', 'red-animate');
+                break;
+
+            default:
+                $('.video-animation').css('animation-name', 'cyan-animate');
+                break;
+        }
+
+    });
+
+
+    // // calling the user animation
+    $('.video-animation').hide();
+    $('.call-animation').hide();
+    $('.video-call-user').click(() => {
+        $('.video-animation').show();
+        setTimeout(() => {
+            $('.video-animation').hide();
+        },4000);
+    });
+
+    $('.call-user').click(() => {
+        $('.call-animation').show();
+        setTimeout(() => {
+            $('.call-animation').hide();
+        }, 4000);
     });
 })
