@@ -10,7 +10,7 @@
 </head>
 <body class="overflow-hidden">
 
-    <div class="chat-system relative">
+    <div class="chat-system relative overflow-hidden">
         <!-- chats -->
         <div class="chats flex flex-col border-r">
             <!-- <div class="flex gap-4 text-sm">
@@ -30,7 +30,7 @@
                 <p class="font-semibold" id="chat-head-name">Sarah Johnson</p>
 
                 <button class="ml-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone color-theme" width="24" height="24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone color-theme call-user" width="24" height="24"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
@@ -38,7 +38,7 @@
                 </button>
 
                 <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-video color-theme" width="24" height="24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-video color-theme video-call-user" width="24" height="24"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
@@ -101,7 +101,7 @@
            
         </div>
 
-        <div class="absolute chat-settings border-l">
+        <div class="chat-settings border-l">
 
             <button class="absolute top-2 left-2 cursor-pointer close-chat-settings">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-left color-theme" width="24" height="24"
@@ -121,7 +121,7 @@
 
             <!-- chat optons in settings -->
             <div class="flex items-cener justify-center gap-5">
-                <button class="flex flex-col items-center text-xs">
+                <button class="flex flex-col items-center text-xs call-user">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone color-theme" width="24" height="24"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -130,7 +130,7 @@
                     Audio
                 </button>
 
-                <button class="flex flex-col items-center text-xs">
+                <button class="flex flex-col items-center text-xs video-call-user">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-video color-theme" width="24" height="24"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -197,6 +197,23 @@
             </div>
 
         </div>
+    </div>
+
+    <!-- calling user animaiton -->
+    <div class="absolute video-animation top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-cyan-500 color-theme-btn w-[125px] h-[125px] rounded-full grid place-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-video" width="75" height="75" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+        <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+        </svg>
+    </div>
+
+    <div class="absolute call-animation top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-cyan-500 color-theme-btn w-[125px] h-[125px] rounded-full grid place-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="75" height="75"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+        </svg>
     </div>
     
     <script src="app.js"></script>
